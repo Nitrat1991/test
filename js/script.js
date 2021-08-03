@@ -78,3 +78,13 @@ detectPersonalLevel();
 
 console.log(personalMovieDB);
 
+function lernJS (lang, callback) {
+    console.log(`Я учу: ${lang}`);
+    callback();
+}
+
+function done() {
+    console.log(`Я прошел урок`);
+}
+
+lernJS('JS', done);
