@@ -1,29 +1,28 @@
-const options = {
-    name: 'test',
-    width: 1024,
-    height: 1024,
-    colors: {
-        border: 'black',
-        bg: 'red'
-    },
-    makeTest: function() {
-        console.log(`Test`);
-    }
-};
 
-const {border, bg} = options.colors;
+const video = ['youtube', 'video', 'rutube'],
+    blogs = ['wordpress', 'levejournal', 'blogger'],
+    internet = [...video, ...blogs, 'vf', 'FB'];
 
+console.log(internet);
 
-let counter = 0;
-for (let key in options) {
-    if (typeof(options[key]) === 'object') {
-        for (let i in options[key]) {
-            console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
-            
-        }
-    }   else {
-        console.log(`Свойство ${key} имеет значение ${options[key]}`);        
-    }
+function log(a, b ,c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
 }
 
-console.log(Object.keys(options));
+const num = [2, 5, 7];
+
+log(...num);
+
+const q = {
+    one: 1,
+    two: 2
+};
+
+const newQ = {...q};
+
+newQ.two = 3;
+
+console.log(newQ);
+console.log(q);
